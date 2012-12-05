@@ -10,11 +10,9 @@ class HomeController < ApplicationController
   end
 
   def shipped
-    if params[:commit][/shipped/]
-      session[:shipped] = true
-    else
-      redirect_to "/"
-    end
+    session[:shipped] = true if params[:commit][/shipped/]
+
+    redirect_to "/"
   end
 
   def reset
