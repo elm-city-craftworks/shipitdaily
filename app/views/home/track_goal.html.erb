@@ -1,0 +1,8 @@
+<h1>Today, I want to ship...</h1>
+
+<%= form_tag("/home/shipped", :method => :post) do %>
+  <p><%= session[:goal] %></p>
+  <br/>
+  <%= submit_tag "I shipped it!" %>
+  <%= submit_tag "I gave up!" %>
+<% end %>

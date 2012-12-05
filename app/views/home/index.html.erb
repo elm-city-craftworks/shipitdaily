@@ -1,0 +1,7 @@
+<h1>Today, I want to ship...</h1>
+
+<%= form_tag("/home/commit", :method => :post) do %>
+  <%= text_area_tag(:goal, "Describe what you want to ship here, in a sentence or two", :size => "70x4") %>
+  <br/>
+  <%= submit_tag "Commit to shipping it" %>
+<% end %>
