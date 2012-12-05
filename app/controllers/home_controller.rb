@@ -6,14 +6,14 @@ class HomeController < ApplicationController
 
   def commit
     session[:goal] = params[:goal]
-    redirect_to "/home/index"
+    redirect_to "/"
   end
 
   def shipped
     if params[:commit][/shipped/]
       session[:shipped] = true
     else
-      redirect_to "/home/reset"
+      redirect_to "/"
     end
   end
 
@@ -21,6 +21,6 @@ class HomeController < ApplicationController
     session[:shipped] = nil
     session[:goal] = nil
 
-    redirect_to "/home/index"
+    redirect_to "/"
   end
 end
