@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   def create
-    render :text => auth_hash["uid"]   
+    Person.find_or_create_by_uid(auth_hash["uid"])
+    session[:identity] = auth_hash["uid"]
+
+    redirect "/"
   end
 
   def auth_hash

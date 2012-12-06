@@ -1,9 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :establish_identity
+  before_filter :authorize_user
 
-  def establish_identity
-    session[:identity] ||= SecureRandom.uuid
+  private
+
+  def authorize_user
+    redirect_to "/auth/twitter" unless session[:identity] 
+  end
+
+  def current_user
+    Person.find_by_uid(session[:identity])
   end
 end
