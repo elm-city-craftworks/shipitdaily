@@ -5,8 +5,12 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def login_path
+    Rails.env.development? ? '/auth/developer' : '/auth/twitter'
+  end
+    
   def authorize_user
-    redirect_to "/auth/twitter" unless session[:identity] 
+    redirect_to login_path unless session[:identity] 
   end
 
   def current_user
