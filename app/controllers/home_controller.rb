@@ -22,6 +22,8 @@ class HomeController < ApplicationController
 
     if params[:commit][/shipped/]
       goal.update_attribute(:completed, true)
+    else
+      goal.destroy
     end
 
     redirect_to "/"
