@@ -1,10 +1,10 @@
 class HomeController < ApplicationController
   def index
-    @goal  = current_user.goals.where("created_at > ?", Date.today - 1).first
+    @goal  = current_user.goals.current
 
-    if @goal && @goal.completed
+    if @goal.completed?
       render "shipped"
-    elsif @goal
+    elsif @goal.planned?
       render "track_goal"
     else
       render "index"
@@ -12,25 +12,24 @@ class HomeController < ApplicationController
   end
 
   def commit
-    current_user.goals.create(:description => params[:goal])
-
+    current_user.goals.plan(params[:goal])
     redirect_to "/"
   end
 
   def shipped
-    goal = current_user.goals.where("created_at > ?", Date.today - 1).first
+    goal = current_user.goals.current
 
     if params[:commit][/shipped/]
-      goal.update_attribute(:completed, true)
+      goal.complete
     else
-      goal.destroy
+      goal.abandon
     end
 
     redirect_to "/"
   end
 
   def reset
-    goal   = current_user.goals.where("created_at > ?", Date.today - 1).destroy_all
+    current_user.goals.create(:state => "undefined")
 
     redirect_to "/"
   end
