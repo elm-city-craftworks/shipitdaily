@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     Person.find_or_create_by_uid(auth_hash["uid"])
     session[:identity] = auth_hash["uid"]
 
-    redirect "/"
+    redirect_to "/"
   end
 
   private
