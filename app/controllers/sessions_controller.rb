@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    raise auth_hash.inspect   
+    render :text => auth_hash["uid"]   
   end
 
   def auth_hash
