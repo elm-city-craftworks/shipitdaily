@@ -1,23 +1,38 @@
 class HomeController < ApplicationController
   def index
-    return render "shipped"    if session[:shipped]
-    return render "track_goal" if session[:goal]
+    person = Person.find_or_create_by_uid(session[:identity])
+    @goal  = person.goals.where("created_at > ?", Date.today - 1).first
+
+    if @goal && @goal.completed
+      render "shipped"
+    elsif @goal
+      render "track_goal"
+    else
+      render "index"
+    end
   end
 
   def commit
-    session[:goal] = params[:goal]
+    person = Person.find_or_create_by_uid(session[:identity])
+    person.goals.create(:description => params[:goal])
+
     redirect_to "/"
   end
 
   def shipped
-    session[:shipped] = true if params[:commit][/shipped/]
+    person = Person.find_or_create_by_uid(session[:identity])
+    goal = person.goals.where("created_at > ?", Date.today - 1).first
+
+    if params[:commit][/shipped/]
+      goal.update_attribute(:completed, true)
+    end
 
     redirect_to "/"
   end
 
   def reset
-    session[:shipped] = nil
-    session[:goal] = nil
+    person = Person.find_or_create_by_uid(session[:identity])
+    goal   = person.goals.where("created_at > ?", Date.today - 1).destroy_all
 
     redirect_to "/"
   end
