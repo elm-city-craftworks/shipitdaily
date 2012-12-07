@@ -1,8 +1,15 @@
-<h1>Today, I want to ship...</h1>
+<div class="column">
+  <h1>Today, I want to ship...</h1>
 
-<%= form_tag("/home/shipped", :method => :post) do %>
-  <p><%= @goal.description %></p>
-  <br/>
-  <%= submit_tag "I shipped it!" %>
-  <%= submit_tag "I gave up!" %>
-<% end %>
+  <%= form_tag("/home/shipped", :method => :post) do %>
+    <p class="lead"><%= @goal.description %></p>
+    <div class="row">
+      <div class="span3">
+        <%= submit_tag "I shipped it!", :class => "btn btn-success btn-large btn-block" %>
+      </div>
+      <div class="span3">
+        <%= submit_tag "I gave up!", :class => "btn btn-danger btn-large btn-block" %>
+      </div>
+    </div>
+  <% end %>
+</div>

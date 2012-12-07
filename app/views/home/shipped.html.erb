@@ -1,7 +1,8 @@
-<h1>Today, you successfully shipped:</h1>
+<div class="column">
+  <h1>Congrats! Today you shipped...</h1>
 
-<p><%= @goal.description %></p>
+  <p class="lead"><%= @goal.description %></p>
 
-<h2>Good Job, Buddy!</h2>
-
-<a href="/home/reset">I want to ship something else</a>
+  <p class="pull-left"><em>Good job, buddy. You rock!</em></p>
+  <a href="/home/reset" class="pull-right">Ready to ship something else?</a>
+</div>

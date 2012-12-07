@@ -1,7 +1,13 @@
-<h1>Today, I want to ship...</h1>
-
-<%= form_tag("/home/commit", :method => :post) do %>
-  <%= text_area_tag(:goal, "Describe what you want to ship here, in a sentence or two", :size => "70x4") %>
-  <br/>
-  <%= submit_tag "Commit to shipping it" %>
-<% end %>
+<div class="column">
+  <h1>Today, I want to ship...</h1>
+  <%= form_tag("/home/commit", :method => :post) do %>
+    <%= text_field_tag(:goal, "", :class => "field span6", 
+                       :placeholder => "Enter your amazing plan for world domination here, "+
+                                       "but keep it short and sweet!") %>
+    <br/>
+    <%= submit_tag "Commit to shipping it", :class => "btn btn-primary pull-right" %>
+    <p class="pull-left lead">
+      <small>Pick a task that you can <em>finish</em> in the next 24 hours.</small>
+    </p>
+  <% end %>
+</div>

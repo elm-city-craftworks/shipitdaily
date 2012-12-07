@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+.column {
+  width: 575px;
+  margin: 0 auto;
+}
