@@ -1,6 +1,6 @@
 task :start_goal_reminders => :environment do
   Person.reminders_enabled.each do |person|
-    Reminder.start_goal(person) if person.goals.current.undefined?
+    Reminder.start_goal(person) unless person.goals.current.planned?
   end
 end
 
