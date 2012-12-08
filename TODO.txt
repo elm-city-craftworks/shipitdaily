@@ -1,1 +1,2 @@
 * Strip out twitter bootstrap stuff
+* Reminder UI: Time for start / finish reminders, email entry.
