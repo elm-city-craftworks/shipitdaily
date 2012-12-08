@@ -20,6 +20,10 @@ class Goal < ActiveRecord::Base
     update_attribute(:state, "abandoned")
   end
 
+  def undefined?
+    state == "undefined"
+  end
+
   def completed?
     state == "completed"
   end
