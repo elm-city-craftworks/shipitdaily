@@ -1,5 +1,5 @@
 class Reminder < ActionMailer::Base
-  default :from => "gregory@practicingruby.com"
+  default :from => "<Ship it daily> gregory@practicingruby.com"
 
   def start_goal(recipient)
     mail(:to => recipient.email, :subject => "What will you ship today?").deliver
