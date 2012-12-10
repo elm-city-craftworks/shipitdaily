@@ -4,8 +4,7 @@ class Goal < ActiveRecord::Base
   belongs_to :author, :class_name => "Person"
 
   def self.current
-    where("created_at > ?", Time.now - 12.hours).order("created_at desc").first || 
-    Goal.new(:state => "undefined")
+    order("created_at desc").first || Goal.new(:state => "undefined")
   end
 
   def self.plan(description)
