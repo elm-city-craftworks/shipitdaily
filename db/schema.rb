@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121208151348) do
+ActiveRecord::Schema.define(:version => 20121211004601) do
 
   create_table "goals", :force => true do |t|
     t.text     "description"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20121208151348) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.text     "email"
+    t.text     "time_zone"
   end
 
 end
