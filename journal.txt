@@ -1,3 +1,9 @@
+The general process of working in atomic slices has been very nice -- it
+prevents the temptation to rush through things, and makes it easier to cope with
+stumbling blocks along the way. There is no big checklist to try to clear each
+day, and so failures seem more tolerable when they are isolated. If one day goes
+poorly, we can switch directions the next day and start fresh in a new area.
+
 Around the point in time where I started working on the reminder mailer, I
 started to feel a bit of the ill effects of cowboy coding rather than having a
 more structured (i.e. test-driven) flow. But since I was still trying to figure
