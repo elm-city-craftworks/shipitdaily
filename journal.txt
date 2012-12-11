@@ -1,0 +1,12 @@
+Around the point in time where I started working on the reminder mailer, I
+started to feel a bit of the ill effects of cowboy coding rather than having a
+more structured (i.e. test-driven) flow. But since I was still trying to figure
+out the requirements of the project at that time, I was hesitant to formalize my
+efforts -- I wanted to focus on the product, not the code.
+
+Working on the timezone support and storage of reminder times reminded me how
+much I hate anything to do with temporal logic. After looking around at some
+options, I decided to use the ugly Time.zone = ... before_filter which has
+global side effects (but those are mitigated because we're not processing
+concurrent requests, right?), and to record reminder times as integer offsets
+rather than text fields or time fields. All of this feels like ugly hackery. :-/
