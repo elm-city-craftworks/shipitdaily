@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121211224548) do
+ActiveRecord::Schema.define(:version => 20121212234117) do
 
   create_table "goals", :force => true do |t|
     t.text     "description"
@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(:version => 20121211224548) do
     t.text     "start_goal_reminder_time"
     t.integer  "finish_goal_reminder_offset"
     t.text     "finish_goal_reminder_time"
+    t.integer  "start_goal_reminder_hour"
+    t.integer  "finish_goal_reminder_hour"
   end
 
 end

@@ -11,11 +11,15 @@ to the big picture planning and think about whether it should be reduced in
 scope, cut, or deferred. (Why is this different than ordinary "multiple changes
 per day" work? Hard to verbalize :-/)
 
+--------------------------------------------------------------------------------
+
 Around the point in time where I started working on the reminder mailer, I
 started to feel a bit of the ill effects of cowboy coding rather than having a
 more structured (i.e. test-driven) flow. But since I was still trying to figure
 out the requirements of the project at that time, I was hesitant to formalize my
 efforts -- I wanted to focus on the product, not the code.
+
+--------------------------------------------------------------------------------
 
 Working on the timezone support and storage of reminder times reminded me how
 much I hate anything to do with temporal logic. After looking around at some
@@ -27,3 +31,14 @@ rather than text fields or time fields. All of this feels like ugly hackery. :-/
 Also got really hung up with form helpers for time entry, ultimately ended up
 just using a text field which I plan to validate later. This is what ate a huge
 chunk of my time on this feature though.
+
+--------------------------------------------------------------------------------
+
+Gave up on time zone math temporarily, because I was struggling with figuring
+out how to synchronize the scheduler. Instead requiring hourly level of
+granularity in UTC only. Could be worth going back and researching how to deal
+with time correctly, and then writing an article (or even an eBook) on it.
+
+I should have done this two days ago, rather than trying to solve the hard
+problem first. Could have spent two more days on improving other features rather
+than trying and failing on this one. ---UNDERSCORE THIS POINT IN ARTICLE ---

@@ -4,21 +4,24 @@
     <%= f.label :email, "Email: " %>
     <%= f.text_field :email %>
 
-    <%= f.label :time_zone, "Time Zone:" %>
-    <%= f.time_zone_select :time_zone, nil, :default => "UTC" %> 
-
-    <%= f.label :start_goal_reminder_time,  
+    <%= f.label :start_goal_reminder_hour,  
                 "Send a daily <strong>start goal</strong> reminder at:".html_safe %>
 
-    <%= f.text_field :start_goal_reminder_time %>
+    <%= f.select :start_goal_reminder_hour, 
+                 (0..23).map { |e| ["#{e}:00", e] }, 
+                 :include_blank => true %>
 
-    <%= f.label :finish_goal_reminder_time,  
+    <%= f.label :finish_goal_reminder_hour,  
                 "Send a daily <strong>start goal</strong> reminder at:".html_safe %>
 
-    <%= f.text_field :finish_goal_reminder_time %>
+    <%= f.select :finish_goal_reminder_hour, 
+                 (0..23).map { |e| ["#{e}:00", e] },
+                 :include_blank => true %>
     <p>
       <%= f.submit("Update preferences", :class => "btn btn-primary") %>
     </p>
+
+    <p>NOTE: All times are in UTC</p>
   <% end %>
 </div>
 
