@@ -23,3 +23,7 @@ options, I decided to use the ugly Time.zone = ... before_filter which has
 global side effects (but those are mitigated because we're not processing
 concurrent requests, right?), and to record reminder times as integer offsets
 rather than text fields or time fields. All of this feels like ugly hackery. :-/
+
+Also got really hung up with form helpers for time entry, ultimately ended up
+just using a text field which I plan to validate later. This is what ate a huge
+chunk of my time on this feature though.
