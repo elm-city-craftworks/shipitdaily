@@ -7,6 +7,15 @@
     <%= f.label :time_zone, "Time Zone:" %>
     <%= f.time_zone_select :time_zone, nil, :default => "UTC" %> 
 
+    <%= f.label :start_goal_reminder_time,  
+                "Send a daily <strong>start goal</strong> reminder at:".html_safe %>
+
+    <%= f.text_field :start_goal_reminder_time %>
+
+    <%= f.label :finish_goal_reminder_time,  
+                "Send a daily <strong>start goal</strong> reminder at:".html_safe %>
+
+    <%= f.text_field :finish_goal_reminder_time %>
     <p>
       <%= f.submit("Update preferences", :class => "btn btn-primary") %>
     </p>

@@ -4,6 +4,13 @@ stumbling blocks along the way. There is no big checklist to try to clear each
 day, and so failures seem more tolerable when they are isolated. If one day goes
 poorly, we can switch directions the next day and start fresh in a new area.
 
+The process also makes it easier to learn from failures and difficulties rather
+than trying to simply overcome them so that you can move on to the next thing.
+If a feature turns out to be harder to implement than expected, you can go back
+to the big picture planning and think about whether it should be reduced in
+scope, cut, or deferred. (Why is this different than ordinary "multiple changes
+per day" work? Hard to verbalize :-/)
+
 Around the point in time where I started working on the reminder mailer, I
 started to feel a bit of the ill effects of cowboy coding rather than having a
 more structured (i.e. test-driven) flow. But since I was still trying to figure

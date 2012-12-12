@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121211201906) do
+ActiveRecord::Schema.define(:version => 20121211224548) do
 
   create_table "goals", :force => true do |t|
     t.text     "description"
@@ -23,12 +23,14 @@ ActiveRecord::Schema.define(:version => 20121211201906) do
 
   create_table "people", :force => true do |t|
     t.text     "uid"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.text     "email"
     t.text     "time_zone"
-    t.integer  "start_reminder_offset"
-    t.integer  "finish_reminder_offset"
+    t.integer  "start_goal_reminder_offset"
+    t.text     "start_goal_reminder_time"
+    t.integer  "finish_goal_reminder_offset"
+    t.text     "finish_goal_reminder_time"
   end
 
 end
