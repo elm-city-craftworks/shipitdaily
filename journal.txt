@@ -47,3 +47,12 @@ Most importantly, this is a matter of a tiny inconvenience, not a fundamental
 limitation in functionality. Each user will need to look up their UTC offset at
 most twice per year, and this is a side project mostly for my own personal 
 use anyway.
+
+-------------------------------------------------------------------------------
+
+Stepped through the workflow of the app a few times and smoothed some of the
+rough edges. I was originally going to also add email confirmation, but figured
+YAGNI. Also wanted to add a "log out" button, but figured also YAGNI, since the
+entire app is behind an auth wall, but this makes it cumbersome to switch
+twitter accounts while using it. Not sure how to solve it, aside from a weird
+"reset" button. Maybe deal with this when it's out of prototype mode?
