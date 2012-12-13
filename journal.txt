@@ -56,3 +56,8 @@ YAGNI. Also wanted to add a "log out" button, but figured also YAGNI, since the
 entire app is behind an auth wall, but this makes it cumbersome to switch
 twitter accounts while using it. Not sure how to solve it, aside from a weird
 "reset" button. Maybe deal with this when it's out of prototype mode?
+
+At this point, the app has a fairly cohesive (if simplistic) feature set. Adding
+any kind of historical view of data may require a bunch of secondary features,
+such as content editing (rather than simply "giving up") and goal deletion,
+among other things. But we'll treat those all as "problems for later" ;-)
