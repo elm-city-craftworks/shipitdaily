@@ -12,7 +12,7 @@
                  :include_blank => true %>
 
     <%= f.label :finish_goal_reminder_hour,  
-                "Send a daily <strong>start goal</strong> reminder at:".html_safe %>
+                "Send a daily <strong>finish goal</strong> reminder at:".html_safe %>
 
     <%= f.select :finish_goal_reminder_hour, 
                  (0..23).map { |e| ["#{e}:00", e] },
