@@ -61,3 +61,8 @@ At this point, the app has a fairly cohesive (if simplistic) feature set. Adding
 any kind of historical view of data may require a bunch of secondary features,
 such as content editing (rather than simply "giving up") and goal deletion,
 among other things. But we'll treat those all as "problems for later" ;-)
+
+-------------------------------------------------------------------------------
+
+Got www.shipitdaily.com working, but annoyed by this heroku limitation:
+https://devcenter.heroku.com/articles/avoiding-naked-domains-dns-arecords
