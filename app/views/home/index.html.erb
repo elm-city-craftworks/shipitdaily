@@ -1,13 +1,19 @@
 <div class="column">
   <h1>Today, I want to ship...</h1>
+  <br/>
   <%= form_tag("/home/commit", :method => :post) do %>
     <%= text_field_tag(:goal, "", :class => "field span6", 
                        :placeholder => "Enter your amazing plan for world domination here, "+
                                        "but keep it short and sweet!") %>
-    <br/>
-    <%= submit_tag "Commit to shipping it", :class => "btn btn-primary pull-right" %>
-    <p class="pull-left lead">
+
+    <%= submit_tag "Commit to shipping it", :class => "btn btn-primary span2 pull-right" %>
+
+    <p class="lead">
       <small>Pick a task that you can <em>finish</em> in the next 24 hours.</small>
     </p>
   <% end %>
+
+  <%= render :partial => "navigation" %>
+
 </div>
+

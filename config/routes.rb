@@ -3,7 +3,7 @@ Shipit::Application.routes.draw do
 
   namespace :home do
     get   :index
-    get   :reset
+    post  :reset
     post  :commit
     post  :shipped
   end
@@ -11,6 +11,7 @@ Shipit::Application.routes.draw do
   resources :people
 
   match '/auth/:provider/callback' => 'sessions#create'
+  match "/settings" => "people#edit"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

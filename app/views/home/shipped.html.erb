@@ -1,8 +1,15 @@
 <div class="column">
   <h1>Congrats! Today you shipped...</h1>
+  <br/>
 
   <p class="lead"><%= @goal.description %></p>
 
-  <p class="pull-left"><em>Good job, buddy. You rock!</em></p>
-  <a href="/home/reset" class="pull-right">Ready to ship something else?</a>
+  <br/>
+
+  <p><%= button_to "Ready to ship something else?", 
+    "/home/reset", :class => "btn btn-primary pull-right"%></p>
+    <p><strong>Good job, buddy. You rock!</strong></em></p>
+
+ <%= render :partial => "navigation" %>
 </div>
+
