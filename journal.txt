@@ -42,3 +42,8 @@ with time correctly, and then writing an article (or even an eBook) on it.
 I should have done this two days ago, rather than trying to solve the hard
 problem first. Could have spent two more days on improving other features rather
 than trying and failing on this one. ---UNDERSCORE THIS POINT IN ARTICLE ---
+
+Most importantly, this is a matter of a tiny inconvenience, not a fundamental
+limitation in functionality. Each user will need to look up their UTC offset at
+most twice per year, and this is a side project mostly for my own personal 
+use anyway.
