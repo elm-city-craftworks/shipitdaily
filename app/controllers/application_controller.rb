@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private
 
   def login_path
-    Rails.env.development? ? '/auth/developer' : '/auth/twitter'
+    Rails.env.production? ? '/auth/twitter' : '/auth/developer'
   end
     
   def authorize_user
