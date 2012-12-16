@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   database: shipit-devel
-  username: seacreature
+  username: root
   host: localhost
   min_messages: error
 
@@ -16,13 +16,13 @@ development:
 test:
   adapter: postgresql
   database: shipit-test
-  username: seacreature
+  username: root
   host: localhost
   min_messages: error
 
 production:
   adapter: postgresql
   database: shipit-production
-  username: seacreature
+  username: root
   host: localhost
   min_messages: error
