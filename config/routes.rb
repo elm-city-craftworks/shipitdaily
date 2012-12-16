@@ -8,7 +8,7 @@ Shipit::Application.routes.draw do
     post  :shipped
   end
 
-  resources :people
+  resources :people, :only => [:edit, :update]
 
   match '/auth/:provider/callback' => 'sessions#create'
   match "/settings" => "people#edit"

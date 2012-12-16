@@ -27,6 +27,7 @@ module Shipit
 
     config.generators do |g|
       g.test_framework  :test_unit, :fixture => false
+      g.helper = false
     end
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.

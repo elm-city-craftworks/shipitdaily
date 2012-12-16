@@ -13,7 +13,7 @@ class HomeController < ApplicationController
 
   def commit
     current_user.goals.plan(params[:goal])
-    redirect_to "/"
+    redirect_to root_path
   end
 
   def shipped
@@ -25,12 +25,12 @@ class HomeController < ApplicationController
       goal.abandon
     end
 
-    redirect_to "/"
+    redirect_to root_path
   end
 
   def reset
     current_user.goals.create(:state => "undefined")
 
-    redirect_to "/"
+    redirect_to root_path
   end
 end

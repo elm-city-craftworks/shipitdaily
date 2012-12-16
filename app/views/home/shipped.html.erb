@@ -4,9 +4,9 @@
   <p class="lead" id="goal-description"><%= @goal.description %></p>
 
   <p><%= button_to "Ready to ship something else?",
-    "/home/reset", :class => "btn btn-primary pull-right"%></p>
+    home_reset_path, :class => "btn btn-primary pull-right"%></p>
     <p><strong>Good job, buddy. You rock!</strong></em></p>
 
- <%= render :partial => "navigation" %>
+ <%= render "navigation" %>
 </div>
 

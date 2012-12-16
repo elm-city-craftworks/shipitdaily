@@ -1,7 +1,7 @@
 <div class="column">
   <h1>Today, I want to ship...</h1>
 
-  <%= form_tag("/home/shipped", :method => :post) do %>
+  <%= form_tag(home_shipped_path, :method => :post) do %>
     <p class="lead"><%= @goal.description %></p>
     <div class="row">
       <div class="span3">
@@ -13,5 +13,5 @@
     </div>
   <% end %>
 
-  <%= render :partial => "navigation" %>
+  <%= render "navigation" %>
 </div>

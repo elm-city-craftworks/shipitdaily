@@ -1,6 +1,6 @@
 <div class="column">
   <h2>Account Settings</h2>
-  <%= form_for(@person, :method => :put) do |f| %>
+  <%= form_for(@person) do |f| %>
     <%= f.label :email, "Email: " %>
     <%= f.text_field :email %>
 
