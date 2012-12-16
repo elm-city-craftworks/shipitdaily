@@ -1,12 +1,9 @@
 <div class="column">
   <h1>Congrats! Today you shipped...</h1>
-  <br/>
 
-  <p class="lead"><%= @goal.description %></p>
+  <p class="lead" id="goal-description"><%= @goal.description %></p>
 
-  <br/>
-
-  <p><%= button_to "Ready to ship something else?", 
+  <p><%= button_to "Ready to ship something else?",
     "/home/reset", :class => "btn btn-primary pull-right"%></p>
     <p><strong>Good job, buddy. You rock!</strong></em></p>
 

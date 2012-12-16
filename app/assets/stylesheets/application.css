@@ -16,3 +16,12 @@
   width: 575px;
   margin: 50px auto;
 }
+
+p#goal-description{
+  margin-bottom: 60px;
+}
+
+#navigation{
+  margin-top: 20px;
+  border-top: 1px solid #EEE;
+}
