@@ -15,3 +15,10 @@ task :finish_goal_reminders => :environment do
     Reminder.finish_goal(person) if person.goals.current.planned?
   end
 end
+
+task :ping do
+  require 'net/http'
+  
+  uri = URI('http://www.shipitdaily.com')
+  Net::HTTP.get(uri) # => String
+end
