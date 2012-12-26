@@ -1,5 +1,6 @@
 Shipit::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+  config.secret_token = "8cbd21de7803461e79a666b41b3c1462d618f294c028bc0e7c7546187426f77f2f57ae2970d369459035e9258817e8f2fcc0cf55e196190e2dce37a6db2a3aa0"
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
